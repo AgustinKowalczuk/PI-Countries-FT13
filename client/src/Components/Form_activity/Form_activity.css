@@ -1,0 +1,24 @@
+form{
+    display: flex;
+    flex-direction: column;
+    background-color: khaki;
+    align-items: center;
+}
+label{
+    margin-right: 40px;
+}
+#btn_Form{
+    margin-top: 6rem;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 2rem;
+}
+#datos{
+    border: solid black;
+    width:600px;
+}
+#form_of_charge{
+    border: solid gray;
+    width: max-content;
+    align-items: center;
+}

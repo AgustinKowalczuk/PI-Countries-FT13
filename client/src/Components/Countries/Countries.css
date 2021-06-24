@@ -1,0 +1,12 @@
+#cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 5rem ;
+}
+
+#pag{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}

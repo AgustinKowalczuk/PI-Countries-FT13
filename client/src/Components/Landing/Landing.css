@@ -1,0 +1,29 @@
+body{
+    background-image: url('../../Picture/BackGround.jpg');
+    width: 100%;
+    height: 100%;
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    top: 0px; 
+    background-size: cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+}
+
+#Cont_landing{
+    height: 100px;
+    background-color: powderblue;
+    border-radius: 3rem;
+    font-size: 2rem;
+}
+
+#Landing{
+    margin-top: 6rem;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 2rem;
+}
+
+ 

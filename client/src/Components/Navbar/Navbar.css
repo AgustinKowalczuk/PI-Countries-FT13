@@ -1,0 +1,18 @@
+#Content_nav{
+    display: flex;
+    flex-direction: row;
+    background-color: khaki;
+}
+
+#img_home{
+    background-color: rgba(0, 0, 0, 0.301);
+    margin: 1rem;
+    width: 70px;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 100%;
+}
+#Create_act{
+    margin-top: 2rem;
+    margin-left: 32rem;
+}

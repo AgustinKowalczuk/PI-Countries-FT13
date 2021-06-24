@@ -1,0 +1,14 @@
+#detail_table{
+    vertical-align: baseline;
+    background-color: khaki;
+    align-items: center;
+}
+#flag{
+    width: 300px;
+    height: 200px;
+    margin: 30px;
+}
+#information{
+    border:black solid;
+    margin: 20rem;
+}

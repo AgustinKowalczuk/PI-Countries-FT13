@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const router = Router();
-const { Op, where } = require("sequelize");
+const { Op} = require("sequelize");
 const { Country, Activity } = require('../db')
 const axios = require('axios')
 
@@ -43,6 +43,24 @@ router.get('/', async (req, res) => {
       include: { model: Activity, require: false }
     });
     return res.json(countries);
+  }
+  //Por continente
+  let { region } = req.query;
+  if (region) {
+    region = region
+      .split(" ")
+      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(" ");
+    let countries2 = await Country.findAll({
+      where: {
+        region: {
+          //comparo ,y like busca por caracter ingresado.
+          [Op.like]: `%${region}%`,
+        },
+      },
+      include: { model: Activity, required: false },
+    });
+    return countries2? res.json(countries2): res.sendStatus(404);
   }
   // Todos los paises 
   else {
