@@ -43,10 +43,13 @@ export function getActivities() {
 }
 
 export function postActivity(data) {
-    console.log(data);
+    // console.log('------------')
+    // console.log(data);
+    // console.log('------------')
     return (dispatch) => {
         return axios.post(`${URL}/activity`, data)
             .then(response => {
+                console.log(data)
                 console.log("response: ")
                 console.log(response)
                 console.log("Done!")

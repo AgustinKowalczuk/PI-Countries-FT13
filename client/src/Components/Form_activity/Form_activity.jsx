@@ -1,14 +1,14 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch,  } from 'react-redux';
 import { postActivity, getCountries } from '../../Redux/Actions/Index';
 import Nav from '../Navbar/Navbar';
 import './Form_activity.css';
 
 const Create_Activity = () => {
     const dispatch = useDispatch();
-    const id3Code = useSelector(state => state.id3Code)
-    const countries = useSelector(state => state.countries)
+    // const id3Code = useSelector(state => state.id3Code)
+    // const countries = useSelector(state => state.countries)
     const [city, setCity] = useState([])
     const [pais, setPais] = useState([])
     const [paises, setPaises] = useState([])
@@ -19,7 +19,6 @@ const Create_Activity = () => {
         difficulty: '',
         season: '',
     })
-
     const Filt = (array_countries) => {
         setPaises([]);
         let filteredCountries_ = array_countries;
@@ -37,6 +36,7 @@ const Create_Activity = () => {
     const handleCountry = (event) => {
         event.preventDefault();
         const options = event.target.options;
+        // console.log(options)
         const selections = [];
         for (let i = 0; i < options.length; i++) options[i].selected && selections.push(options[i].value);
         setPais(selections)
@@ -63,7 +63,6 @@ const Create_Activity = () => {
             setLoading(true);
 
             const info = await axios.get('http://localhost:3001/countries')
-
 
             setCity(info.data);
             setLoading(false);
@@ -102,10 +101,9 @@ const Create_Activity = () => {
                         </div>
                         <div>
                             <label htmlFor="">Countries: </label>
-                            <select multiple name="country" onChange={handleCountry} required >
-                                {console.log(city)}
+                            <select id="countries_sel" multiple name="country" onChange={handleCountry} required >
                                 {city.length > 0 ? city.map((pais, i) => {
-                                    return <option value={pais.id3Code} key={pais.id3Code}>{pais.id3Code}</option>
+                                    return <option value={pais.id3Code} key={pais.id3Code}>{`${pais.id3Code}(${pais.name})`}</option>
                                 }) : <option>Cargando</option>}
                             </select>
                         </div>

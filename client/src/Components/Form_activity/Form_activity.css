@@ -22,3 +22,6 @@ label{
     width: max-content;
     align-items: center;
 }
+#countries_sel{
+    height: 200px;
+}

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { getCountryDetail } from '../../Redux/Actions/Index';
 import Nav from '../Navbar/Navbar';
 
-import'./Detail_country.css'
+import './Detail_country.css'
 
 function Detail_country(props) {
 
@@ -15,26 +15,29 @@ function Detail_country(props) {
     return (
         <div id='detail_table'>
             <div>
-                <Nav/>
+                <Nav />
             </div>
-            <div id='flag'>
-                <img src={props.country_Detail.flag} alt={props.country_Detail.name} width="400px" height="300" />
-            </div>
-            <div id='information'>
-                <h1>{props.country_Detail.name}</h1>
-                <h2>{props.country_Detail.continent}</h2>
-                <h3>id: {props.country_Detail.id3Code}</h3>
-                <p>Capital: {props.country_Detail.capital}</p>
-                <p>Subregión: {props.country_Detail.subregion}</p>
-                <p>Región: {props.country_Detail.region}</p>
-                <p>Area: {props.country_Detail.area}km2 </p>
-                <p>Population: {props.country_Detail.population} </p>
+            <div id="planilla">
+                <div id='flag'>
+                    <img src={props.country_Detail.flag} alt={props.country_Detail.name} />
+                </div>
+                <div id='information'>
+                    <h1>{props.country_Detail.name}</h1>
+                    <h2>{props.country_Detail.continent}</h2>
+                    <h3>id: {props.country_Detail.id3Code}</h3>
+                    <p>Capital: {props.country_Detail.capital}</p>
+                    <p>Subregión: {props.country_Detail.subregion}</p>
+                    <p>Región: {props.country_Detail.region}</p>
+                    <p>Area: {props.country_Detail.area}km2 </p>
+                    <p>Population: {props.country_Detail.population} </p>
+                </div>
+
             </div>
             <hr />
             <div>
-                <h1>Actions</h1>
+                <h1>Activities</h1>
                 {console.log(props.country_Detail)}
-                <p >{props.country_Detail.activities && props.country_Detail.activities.map(c=>
+                <p >{props.country_Detail.activities && props.country_Detail.activities.map(c =>
                     <div>
                         <hr />
                         <div>
@@ -48,7 +51,7 @@ function Detail_country(props) {
                         </div>
                         <hr />
                     </div>
-                    )}</p>
+                )}</p>
             </div>
         </div>
     )

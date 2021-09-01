@@ -1,23 +1,15 @@
 const {Router} = require('express')
 const router = Router();
 const {Country,Activity} = require('../db')
-const { v4: uuidv4 } = require('uuid');
 //Ruta de Post para la actividad
 router.post('/activity',async(req,res)=>{
     let { name, difficulty, season, pais } = req.body;
-    let id = uuidv4();
     let actividad = await Activity.create ({
-        id_a        :   id,
         name_a       :   name, 
         difficulty  :   difficulty, 
         season      :   season,
     })
-    pais.forEach(async (paises) => {
-        let country = await Country.findOne({
-            where: { id3Code: paises }
-        })
-        await actividad.addCountry(country)
-    });
+    actividad.setCountries(pais)
     res.status(201).send('Actividad correctamente!')
 });
 
@@ -40,7 +32,8 @@ router.get('/activities',async(req,res)=>{
         return country_with_activity ? res.json(country_with_activity) : res.sendStatus(404);
     }
     let all_activities = await Activity.findAll();
-
+    let {count, row} = await Activity.findAndCountAll();
+    console.log(count)
     res.send(all_activities);
 })
 

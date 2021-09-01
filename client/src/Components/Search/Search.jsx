@@ -30,6 +30,7 @@ export function Search(props) {
     return (
         <div>
             <form onSubmit={(e) => handleSubmit(e)}>
+                <div className="btn-r">
                 <input
                     type="text"
                     placeholder="Buscar..."
@@ -38,6 +39,8 @@ export function Search(props) {
                     onChange={(e) => handleChange(e)} 
                 />
                 <button type="submit">🔎</button>
+
+                </div>
             </form>
         </div>
     )

@@ -1,14 +1,20 @@
 #detail_table{
     vertical-align: baseline;
-    background-color: khaki;
+    background-color:khaki;
     align-items: center;
 }
 #flag{
-    width: 300px;
-    height: 200px;
-    margin: 30px;
+    /* margin-top: 2rem;
+    margin-left: 17rem; */
 }
 #information{
-    border:black solid;
-    margin: 20rem;
+    margin-left: 40rem;
+}
+img{
+    width: 40rem;
+    height: 20rem;
+}
+#planilla{
+    display: flex;
+    flex-direction: row;
 }

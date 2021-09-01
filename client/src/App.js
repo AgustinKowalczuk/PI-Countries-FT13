@@ -14,12 +14,10 @@ function App() {
     <React.Fragment>
       <div className="App">
         <Route path="/" exact component={Landing} />
-        <div>
           <Route path="/home" exact component={Nav} />
           <Route path="/home" exact component={Home} />
           <Route path="/home/country_detail/:id3Code" exact component={Detail_country}/>
           <Route path="/activity" component={Create_Activity}/>
-        </div>
       </div>
     </React.Fragment>
   );

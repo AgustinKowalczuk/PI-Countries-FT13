@@ -2,11 +2,10 @@
 //
 const initialState = {
     country_Name:[],
-    activity: [],
+    activities: [],
     countries: [],
     country_Detail:{},
     country_id3Code:[],
-    filtroCont:{},
 }
 
 export default function rootReducer(state=initialState,action){

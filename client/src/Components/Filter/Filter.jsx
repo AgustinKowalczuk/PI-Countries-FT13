@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 
 import { filtro_reg, changeCountries, getActivities, getCountries } from '../../Redux/Actions/Index';
