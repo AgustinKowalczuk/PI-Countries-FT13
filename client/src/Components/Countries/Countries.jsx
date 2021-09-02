@@ -27,11 +27,11 @@ export function Countries_cont(props) {
     }
     return (
         <div>
-            <div id='pag'>
+            {/* <div id='pag'>
                 <button onClick={() => setNumberPage(numberPage - 1)}>◀</button>
                 <h3>{numberPage}</h3>
                 <button onClick={() => setNumberPage(numberPage + 1)}>▶</button>
-            </div>
+            </div> */}
             <div id='cont'>
                 {countries ? countries.map(country =>
                     <div>

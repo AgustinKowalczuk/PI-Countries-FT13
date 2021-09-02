@@ -9,4 +9,6 @@
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
 }

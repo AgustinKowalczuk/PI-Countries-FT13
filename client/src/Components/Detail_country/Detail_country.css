@@ -1,20 +1,37 @@
 #detail_table{
     vertical-align: baseline;
-    background-color:khaki;
+    /* background-color:khaki; */
     align-items: center;
-}
-#flag{
-    /* margin-top: 2rem;
-    margin-left: 17rem; */
+    
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 #information{
     margin-left: 40rem;
+    
 }
 img{
     width: 40rem;
     height: 20rem;
 }
 #planilla{
+    margin-top: 2rem;
+    height: 22rem;
     display: flex;
     flex-direction: row;
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+}
+#activities{
+    margin-top: 2rem;
+}
+#activities h1{
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+}
+#infActiv{
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    display: flex;
+    flex-direction: column;
 }

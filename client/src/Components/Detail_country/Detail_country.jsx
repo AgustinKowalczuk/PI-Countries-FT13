@@ -33,23 +33,24 @@ function Detail_country(props) {
                 </div>
 
             </div>
-            <hr />
-            <div>
+            <div id="activities">
+                <hr />
                 <h1>Activities</h1>
                 {console.log(props.country_Detail)}
                 <p >{props.country_Detail.activities && props.country_Detail.activities.map(c =>
                     <div>
                         <hr />
-                        <div>
-                            Activity: {c.name_a}
+                        <div id="infActiv">
+                            <div>
+                                Activity: {c.name_a}
+                            </div>
+                            <div>
+                                Difficulty: {c.difficulty}
+                            </div>
+                            <div>
+                                Season: {c.season}
+                            </div>
                         </div>
-                        <div>
-                            Difficulty: {c.difficulty}
-                        </div>
-                        <div>
-                            Season: {c.season}
-                        </div>
-                        <hr />
                     </div>
                 )}</p>
             </div>
